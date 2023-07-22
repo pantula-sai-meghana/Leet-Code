@@ -1,0 +1,26 @@
+n=list(map(int,input().split()))
+rev, maximum = n[::-1], -1
+print("rev==",rev)
+for i in range(len(rev)):
+    rev[i], maximum = maximum, max(maximum, rev[i])
+    print("rev[i]==",rev[i])
+    print("maximum",maximum)
+print(rev[::-1])
+
+OUTPUT:
+17 18 5 4 6 1
+rev== [1, 6, 4, 5, 18, 17]
+rev[i]== -1
+maximum 1
+rev[i]== 1
+maximum 6
+rev[i]== 6
+maximum 6
+rev[i]== 6
+maximum 6
+rev[i]== 6
+maximum 18
+rev[i]== 18
+maximum 18
+[18, 6, 6, 6, 1, -1]
+> 
